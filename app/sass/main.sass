@@ -302,7 +302,12 @@ form
 			max-width: 430px
 	.work-img-l
 		position: relative
-		left: -30px		
+		left: -30px
+	.work-img-r
+		position: relative
+		top: -50px
+		img
+			max-width: 410px			
 	.container
 		position: relative
 		z-index: 2
@@ -505,7 +510,21 @@ form
 			&:focus
 				outline: none
 		button.owl-prev
-			display: none
+			position: absolute
+			left: 0px
+			top: 40%
+			width: 52px
+			height: 52px
+			box-shadow: 0 4px 12px #e2eaf0
+			background-color: #ffffff !important
+			border-radius: 50%
+			font-size: 0
+			color: transparent
+			background-image: url('../img/arrow.svg') !important
+			background-repeat: no-repeat !important
+			background-position: 50% 50%
+			background-color: #fff
+			z-index: 100
 		button.owl-next
 			transform: rotate(180deg)
 			position: absolute

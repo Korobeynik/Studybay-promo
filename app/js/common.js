@@ -1,11 +1,12 @@
 
 function screenClass() {
     if($(window).innerWidth() > 960) {
-        $('.advantag-grid').removeClass('owl-carousel');
+        $('.help-grid, .awesome .advantag-grid').removeClass('owl-carousel');
     } else {
-        $('.advantag-grid').addClass('owl-carousel');
-            var owl2 = $('.advantag-grid');
+        $('.help-grid , .awesome .advantag-grid').addClass('owl-carousel');
+            var owl2 = $('.mobile-slider');
             owl2.owlCarousel({
+                stagePadding: 20,
                 items:1,
                 loop:true,
                 margin: 0,
@@ -14,7 +15,19 @@ function screenClass() {
                 //autoHeight:true,
                 nav: true,
                 autoplayTimeout: 20000,
-                autoplayHoverPause: false
+                autoplayHoverPause: false,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
             });
     }
 }
@@ -45,10 +58,12 @@ $(function() {
             responsiveClass:true,
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    stagePadding: 0
                 },
                 600:{
-                    items:2
+                    items:2,
+                     stagePadding: 0
                 },
                 1000:{
                     items:3
